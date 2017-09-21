@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Not Interested",
+  "description": "Makes the youtube video not interested button easier to click",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "icons" : {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "content_scripts" : [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "permissions": [
+    "tabs",
+    "*://*.youtube.com/*"
+  ]
+}
