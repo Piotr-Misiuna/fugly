@@ -50,7 +50,8 @@ function actionNotInterested(ev) {
                  var checkExist =  setInterval(function(){
 
      if( document.getElementsByTagName('iron-dropdown')[1] === "undefined"){console.log("one");return false;}
-     if( document.getElementsByTagName('iron-dropdown')[0].hasAttribute('aria-hidden') === true ){console.log("two");return false;}
+     if( document.getElementsByTagName('iron-dropdown')[0].hasAttribute('aria-hidden') === false ){ console.log("two");return false;}
+     if(! document.getElementsByTagName('iron-dropdown')[0].getAttribute('aria-hidden') === null ){ console.log("two and half");return false;}
      console.log("three");
 document.querySelectorAll(".ytd-menu-popup-renderer")[1].click() ;
 clearInterval(checkExist);
